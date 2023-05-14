@@ -4,11 +4,11 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import article1 from "../../public/images/articles/pagination component in reactjs.jpg";
+import article1 from "../../public/images/articles/article1.jpg";
 import { motion, useMotionValue } from "framer-motion";
-import article2 from "../../public/images/articles/create loading screen in react js.jpg";
-import article3 from "../../public/images/articles/create modal component in react using react portals.png";
-import article4 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
+import article2 from "../../public/images/articles/article1.jpg";
+import article3 from "../../public/images/articles/article1.jpg";
+import article4 from "../../public/images/articles/article1.jpg";
 import TranstionEffect from "@/components/TranstionEffect";
 
 const FramerImage = motion(Image);
@@ -123,24 +123,24 @@ const Articles = () => {
           />
           <ul className="grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16">
             <FeatureArticle
-              title=" Words Can Change The World! Build A Custom"
-              summary="Build Pagination Component In Reactjs From Scratch Learn how to build a
-            custom pagination component in ReactJS from scratch. Follow this
-            step-by-step guide to integrate Pagination component in your ReactJS
-            project."
+              title="Introduction to TypeScript: Exploring the Benefits and Basics of Strongly Typed JavaScript
+"
+              summary="But what do you mean by superset? 🤔
+
+A superset in programming is a language that inherits all the features and functionalities of another language, while also introducing new ones. TypeScript falls under this category, as it builds on top of JavaScript by adding new features like 'static typing'. Static typing helps detect errors in your code earlier and makes it easier to understand how different parts of your program work together. It's like a wrapper that enhances JavaScript's capabilities."
               time="- 9 min read"
-              link="/"
+              link="https://hossamfahmi.hashnode.dev/introduction-to-typescript-exploring-the-benefits-and-basics-of-strongly-typed-javascript"
               img={article1}
             />
 
             <FeatureArticle
-              title=" Words Can Change The World! Build A Custom"
-              summary="Build Pagination Component In Reactjs From Scratch Learn how to build a
-            custom pagination component in ReactJS from scratch. Follow this
-            step-by-step guide to integrate Pagination component in your ReactJS
-            project."
+              title="Introduction to TypeScript: Exploring the Benefits and Basics of Strongly Typed JavaScript
+"
+              summary="But what do you mean by superset? 🤔
+
+A superset in programming is a language that inherits all the features and functionalities of another language, while also introducing new ones. TypeScript falls under this category, as it builds on top of JavaScript by adding new features like 'static typing'. Static typing helps detect errors in your code earlier and makes it easier to understand how different parts of your program work together. It's like a wrapper that enhances JavaScript's capabilities."
               time="- 9 min read"
-              link="/"
+              link="https://hossamfahmi.hashnode.dev/introduction-to-typescript-exploring-the-benefits-and-basics-of-strongly-typed-javascript"
               img={article2}
             />
           </ul>
@@ -148,18 +148,16 @@ const Articles = () => {
             All Articales
           </h2>
           <Article
-            title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling
-"
+            title="Introduction to TypeScript: Exploring the Benefits and Basics of Strongly Typed JavaScript"
             img={article3}
             date="March 22, 2022"
-            link="/"
+            link="https://hossamfahmi.hashnode.dev/introduction-to-typescript-exploring-the-benefits-and-basics-of-strongly-typed-javascript"
           />
           <Article
-            title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling
-"
+            title="Introduction to TypeScript: Exploring the Benefits and Basics of Strongly Typed JavaScript"
             img={article4}
             date="March 22, 2022"
-            link="/"
+            link="https://hossamfahmi.hashnode.dev/introduction-to-typescript-exploring-the-benefits-and-basics-of-strongly-typed-javascript"
           />
         </Layout>
       </main>
