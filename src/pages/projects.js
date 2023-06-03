@@ -4,8 +4,15 @@ import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import Image from "next/image";
+import project3 from "../../public/images/projects/ciseco.png";
 import project2 from "../../public/images/projects/hekayat.png";
 import project1 from "../../public/images/projects/ertyad.png";
+import project4 from "../../public/images/projects/chatapp.jpg";
+import project5 from "../../public/images/projects/bokary.png";
+import project6 from "../../public/images/projects/maaleem.png";
+import project7 from "../../public/images/projects/mnaafee.png";
+import project8 from "../../public/images/projects/ounce.png";
+import project9 from "../../public/images/projects/asaarnaa.png";
 
 import { GithubIcon } from "@/components/Icons";
 import { motion } from "framer-motion";
@@ -135,7 +142,7 @@ const projects = () => {
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="Code beyond knowledge limits."
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl "
           />
 
@@ -143,70 +150,90 @@ const projects = () => {
             <div className="col-span-12">
               {" "}
               <FeatureProject
-                title="Crypto Screener Application"
-                img={project1}
+                title="E-commerce Web App - Django, Reactjs"
+                img={project3}
                 summary="A
-              feature-rich Crypto Screener App using React, Tailwind CSS,
-              Context API, React Router and Recharts. It shows detail regarding
-              almost all the cryptocurrency. You can easily convert the price in
-              your local currency."
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+           An ecommerce app built with Django, ReactJS, and Tailwind CSS is a powerful solution for building an online store that is both functional and visually appealing. "
+                link="https://ciseco-e.netlify.app"
+                githubLink="https://github.com/hossameldinfahmi/ReactJS-Ecommerce-FrontEnd.git"
+                type="FullStack Web App"
+              />
+            </div>
+            <div className="col-span-12">
+              {" "}
+              <FeatureProject
+                title="Topsonmessages - MERN WEB APP"
+                img={project4}
+                summary="Chat application using the MERN stack (Mongo, Express, React, Node) and Web Sockets! The app features both direct messaging and group conversation capabilities, as well as notifications thanks to Web Sockets."
+                link="https://www.linkedin.com/feed/update/urn:li:activity:7061271568454234112/"
+                githubLink="https://github.com/hossameldinfahmi/ChattingApp--server"
+                type="MERN Web App"
+              />
+            </div>
+            <div className="col-span-12">
+              {" "}
+              <FeatureProject
+                title="Goodreads Clone Web App - MEAN Stack"
+                img={project5}
+                summary="
+Goodreads Clone App built using the MEAN stack and hosted on GitHub. This app allows users to create an account, search and add books to their reading list, view and review books, and interact with other users through comments and book recommendations."
+                link="https://bookary.netlify.app/"
+                githubLink="https://github.com/hossameldinfahmi/MEAN-Good-Reads-App"
+                type="MEAN Web App"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title="Hekayat"
                 img={project2}
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+                link="https://hekayat.netlify.app"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title="Ertiad "
                 img={project1}
                 link="/"
-                githubLink="/"
-                type="Feature Project"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+                title="manafae"
+                img={project7}
+                link="https://manafae.netlify.app/"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>{" "}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+                title="maleem"
+                img={project6}
+                link="https://maleem.netlify.app/"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>{" "}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+                title="Asaarna"
+                img={project9}
+                link="https://asaarna.netlify.app"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>{" "}
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
-                img={project1}
-                link="/"
-                githubLink="/"
-                type="Feature Project"
+                title="Ounce"
+                img={project8}
+                link="https://ounce.netlify.app/"
+                githubLink="https://github.com/hossameldinfahmi"
+                type="Frontend Web App"
               />
             </div>
           </div>

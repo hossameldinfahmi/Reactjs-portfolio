@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { LiIcon } from "./LiIcon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ name, orgniztion, place, info }) => {
   const ref = useRef(null);
   return (
     <li
@@ -15,11 +15,15 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {type}&nbsp;
-        </h3>
+        <a
+          href="https://www.credly.com/badges/505009a3-2bf6-4ef8-b1bd-2c6ce9cf3893/linked_in_profile"
+          target="_blank"
+          className="capitalize font-bold text-2xl sm:text-xl xs:text-lg block"
+        >
+          {name}&nbsp;
+        </a>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {place}
+          {orgniztion}
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
@@ -27,7 +31,7 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-const Education = () => {
+const Certificates = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -36,7 +40,7 @@ const Education = () => {
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 text-center md:text-6xl xs:text-4xl md:mb-16">
-        Education
+        Certificates
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative  lg:w-[90%] md:w-full">
         <motion.div
@@ -46,16 +50,9 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="9-Months Open Source Application Development Scholarship"
-            time="Oct 2022 - Present"
-            place="Information Technology Institute (ITI)"
-            info="I had the opportunity to gain valuable skills in open source application development and web development (9 Month). Through a rigorous curriculum and hands-on projects, I developed proficiency in programming languages such as Java and Python, and gained experience with modern web development frameworks such as React and Angular."
-          />
-          <Details
-            type="Licentiate In Law"
-            time="Jan 2016 - Oct 2020"
-            place="Helwan University"
-            info="Licentiate in Law is an academic degree that denotes the completion of a specialized undergraduate program in law. In the case of Helwan University, this degree program likely included coursework in various legal subjects such as civil law, criminal law, commercial law, constitutional law, and international law."
+            name="AWS Certified Cloud Practitioner"
+            orgniztion="Amazon Web Services "
+            info="The AWS Certified Practitioner certification is an entry-level certification that validates an individual's understanding of AWS cloud fundamentals. It is intended for individuals who have a basic understanding of AWS services and want to demonstrate their knowledge to potential employers or clients."
           />
         </ul>
       </div>
@@ -63,4 +60,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Certificates;

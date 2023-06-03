@@ -78,7 +78,7 @@ export default function Home() {
       <TranstionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light relative overflow-hidden">
         <motion.div
-          className="bg-dark absolute top-0 right-0 w-1/2 h-full transform rotate-180 rounded-full translate-x-[-90px]"
+          className="bg-dark dark:bg-white absolute top-0 right-0 w-1/2 h-full transform rotate-180 rounded-full translate-x-[-90px] sm:hidden xs:hidden "
           initial={{ scale: 0 }}
           animate={{ scale: 1, ...variants[shape] }}
           exit={{ scale: 0 }}
@@ -97,7 +97,7 @@ export default function Home() {
           key={shape}
         />
         {/* <div class="bg-dark absolute top-0 right-0 w-1/2 h-full transform rotate-180 rounded-full translate-x-[-90px]"></div>{" "} */}
-        <Layout className="pt-0 md:p-16 sm:pt-4 bg-transparent">
+        <Layout className="pt-0 md:p-16 sm:pt-4 bg-transparent dark:bg-transparent  ">
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 flex flex-col lg:w-full lg:text-center">
               <AnimatedText

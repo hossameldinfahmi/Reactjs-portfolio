@@ -28,7 +28,6 @@ const MovingImage = ({ title, img, link }) => {
     imgRef.current.style.display = "none";
     x.set(0);
     y.set(0);
-    console.log(event.pageX);
   }
   return (
     <Link

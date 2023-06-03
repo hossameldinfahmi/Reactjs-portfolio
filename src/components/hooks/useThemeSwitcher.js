@@ -18,7 +18,6 @@ const useThemeSwitcher = () => {
         }
         if (check === "light") {
           document.documentElement.classList.remove("dark");
-          console.log(check);
         }
       } else {
         let check = mediaQuery.matches ? "dark" : "light";
@@ -28,7 +27,6 @@ const useThemeSwitcher = () => {
         }
         if (check === "light") {
           document.documentElement.classList.remove("dark");
-          console.log(check);
         }
       }
     };
