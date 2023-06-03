@@ -195,7 +195,7 @@ Goodreads Clone App built using the MEAN stack and hosted on GitHub. This app al
               <Project
                 title="Ertiad "
                 img={project1}
-                link="/"
+                link="https://ertiad.netlify.app"
                 githubLink="https://github.com/hossameldinfahmi"
                 type="Frontend Web App"
               />
