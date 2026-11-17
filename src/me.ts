@@ -65,3 +65,10 @@ const io = new IntersectionObserver((entries) => {
   for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
 }, { threshold: 0.15 });
 revealables.forEach((el) => io.observe(el));
+
+// Draw hand-made marks when they come into view
+const marks = document.querySelectorAll<HTMLElement>('.scr, .ul, .ci');
+const mio = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('drawn'); mio.unobserve(e.target); }
+}, { threshold: 0.6 });
+marks.forEach((m) => mio.observe(m));

@@ -172,3 +172,16 @@ html[lang=ar] .show__at,html[lang=ar] .foot__small{font-family:var(--mono);font-
   .name .ar{font-size:min(16vw,30svh,240px)}
   .name .en{font-size:min(13vw,24svh,210px)}
 }
+/* v5: hand-drawn marks */
+.scr,.ul,.ci{position:relative;display:inline-block;white-space:nowrap}
+.mk{position:absolute;pointer-events:none;overflow:visible}
+.mk path{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s cubic-bezier(.6,.1,.3,1) .25s}
+.scr .mk{inset:12% -6% 4% -6%;width:112%;height:84%}
+.scr .mk path{stroke:var(--hot);stroke-width:4.5;vector-effect:non-scaling-stroke}
+.scr{color:var(--dim)}
+.ul .mk{left:-2%;right:-2%;bottom:-.22em;width:104%;height:.35em}
+.ul .mk path{stroke:var(--lime);stroke-width:3.5;vector-effect:non-scaling-stroke}
+.ci .mk{inset:-.35em -.4em;width:calc(100% + .8em);height:calc(100% + .7em)}
+.ci .mk path{stroke:var(--hot);stroke-width:3;vector-effect:non-scaling-stroke}
+.drawn .mk path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.mk path{stroke-dashoffset:0}}
