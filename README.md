@@ -10,4 +10,4 @@ npm run dev     # local
 npm run build   # production build in dist/
 ```
 
-Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`, served at https://hossamfahmy.com.
+Deployed on Vercel on every push to `main`, served at https://hossamfahmy.com.
