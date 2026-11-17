@@ -185,3 +185,4 @@ html[lang=ar] .show__at,html[lang=ar] .foot__small{font-family:var(--mono);font-
 .ci .mk path{stroke:var(--hot);stroke-width:3;vector-effect:non-scaling-stroke}
 .drawn .mk path{stroke-dashoffset:0}
 @media (prefers-reduced-motion:reduce){.mk path{stroke-dashoffset:0}}
+.show__vid,.ch__img{height:auto}
