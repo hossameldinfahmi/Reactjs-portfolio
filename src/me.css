@@ -221,12 +221,12 @@ html[lang=ar] .card__stats b{text-align:right}
 html[dir=rtl] .card__char{transform:rotate(-6deg) scaleX(-1)}
 .card--garage:hover .card__char{transform:rotate(0) translateY(6px)}
 .card--garage .card__desc{max-width:24ch}
-.bar{position:relative;display:block;height:14px;border:2px solid var(--ink);border-radius:99px;margin-top:10px}
-.bar__fill{position:absolute;inset-block:2px;inset-inline-start:2px;width:6%;background:var(--ink);border-radius:99px}
-.bar__lbl{position:absolute;top:20px;inset-inline:0;display:flex;justify-content:space-between;text-transform:none;letter-spacing:0;font-size:12px}
-.bar__lbl b{font-family:var(--en-d);font-weight:400;font-size:18px}
+.prog{position:relative;display:block;height:14px;border:2px solid var(--ink);border-radius:99px;margin-top:10px}
+.prog__fill{position:absolute;inset-block:2px;inset-inline-start:2px;width:6%;background:var(--ink);border-radius:99px}
+.prog__lbl{position:absolute;top:20px;inset-inline:0;display:flex;justify-content:space-between;text-transform:none;letter-spacing:0;font-size:12px}
+.prog__lbl b{font-family:var(--en-d);font-weight:400;font-size:18px}
 .card--garage .card__cta{margin-top:auto;padding-top:14px}
-.card--garage .bar{margin-bottom:28px}
+.card--garage .prog{margin-bottom:28px}
 /* v6: hero chips + framed photo */
 .chip{position:absolute;z-index:2;display:flex;align-items:baseline;gap:8px;padding:10px 14px;border-radius:14px;font-weight:700;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .chip b{font-family:var(--en-d);font-weight:400;font-size:30px;line-height:1}
@@ -255,4 +255,6 @@ html[dir=rtl] .card__char{transform:rotate(-5deg) scaleX(-1);margin:-10px 0 0 -6
 html[dir=rtl] .card--garage:hover .card__char{transform:scaleX(-1) translateY(-4px)}
 .card--garage .card__name{font-size:clamp(40px,10vw,72px)}
 .card--garage .card__desc{max-width:34ch}
-.bar__fill{width:8%}
+.prog__fill{width:8%}
+
+.card__char{height:auto;align-self:flex-start}
