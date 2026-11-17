@@ -246,3 +246,13 @@ html[dir=rtl] .card__char{transform:rotate(-6deg) scaleX(-1)}
   .hero__copy{padding-inline:6vw}
   .name .ar{font-size:min(17vw,32svh,260px)}
 }
+/* v6.1 garage card layout */
+.card__head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.card__txt{display:flex;flex-direction:column;gap:10px}
+.card__char{position:static;width:clamp(110px,30vw,170px);flex:none;transform:rotate(5deg);margin:-10px -6px 0 0}
+html[dir=rtl] .card__char{transform:rotate(-5deg) scaleX(-1);margin:-10px 0 0 -6px}
+.card--garage:hover .card__char{transform:rotate(0) translateY(-4px)}
+html[dir=rtl] .card--garage:hover .card__char{transform:scaleX(-1) translateY(-4px)}
+.card--garage .card__name{font-size:clamp(40px,10vw,72px)}
+.card--garage .card__desc{max-width:34ch}
+.bar__fill{width:8%}
