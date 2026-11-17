@@ -1,8 +1,8 @@
 const root = document.documentElement;
 
 const TITLES = {
-  ar: 'حسام فهمي — مهندس بالنهار، فاوندر بالليل',
-  en: 'Hossam Fahmy — Engineer by day, founder by night',
+  ar: 'حسام فهمي — فاوندر MoneyLoop',
+  en: 'Hossam Fahmy — Founder of MoneyLoop',
 };
 
 function setLang(lang: 'ar' | 'en') {
