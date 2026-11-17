@@ -31,6 +31,7 @@ document.getElementById('lang')?.addEventListener('click', () => {
 function fmt(n: number, el: HTMLElement) {
   const pre = el.dataset.pre ?? '';
   const suf = el.dataset.suf ?? '';
+  if (el.dataset.fmt === 'm') return pre + (n >= 100000 ? `${(n / 1e6).toFixed(1)}M` : n >= 1000 ? `${Math.round(n / 1000)}K` : String(n)) + suf;
   if (el.dataset.fmt === 'k') return pre + (n >= 1000 ? `${Math.round(n / 1000)}K` : String(n)) + suf;
   return pre + n.toLocaleString('en-US') + suf;
 }
