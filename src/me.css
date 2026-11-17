@@ -135,3 +135,5 @@ html[lang=en] .foot__big{font-family:var(--en-d);text-transform:uppercase}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
 }
+html[lang=ar] .next__h{line-height:1.15;font-size:clamp(76px,22vw,200px)}
+html[lang=ar] .next__h mark{display:inline-block;line-height:1.1;padding:0 .1em .05em}
