@@ -273,3 +273,7 @@ html[dir=rtl] .card--garage:hover .card__char{transform:scaleX(-1) translateY(-4
 }
 .foot__big{line-height:.95}
 html[lang=en] .foot__big{font-size:clamp(88px,26vw,260px);line-height:.92}
+/* v8: single strike line */
+.scr{color:var(--paper)}
+.scr .mk{inset:0 -4%;width:108%;height:100%}
+.scr .mk path{stroke-width:3.5}
