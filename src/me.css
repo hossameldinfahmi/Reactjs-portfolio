@@ -47,10 +47,10 @@ mark.hot{background:var(--hot);color:var(--paper)}
 @keyframes rise{from{transform:translateY(60%);opacity:0}to{transform:none;opacity:1}}
 .hero__line{margin:18px 0 0;font-size:clamp(24px,6.4vw,44px);font-weight:700;line-height:1.25}
 html[lang=en] .hero__line{font-family:var(--en-d);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
-.sticker{position:absolute;top:84px;inset-inline-end:var(--pad);width:clamp(96px,26vw,150px);aspect-ratio:1;border-radius:50%;background:var(--hot);color:var(--paper);display:grid;place-items:center;text-align:center;font-family:var(--en-d);font-size:clamp(30px,8vw,48px);line-height:.9;transform:rotate(-12deg);animation:spin 14s linear infinite,pop .6s .9s both cubic-bezier(.3,1.6,.5,1)}
+.sticker{position:absolute;top:84px;inset-inline-end:var(--pad);width:clamp(96px,26vw,150px);aspect-ratio:1;border-radius:50%;background:var(--hot);color:var(--paper);display:grid;place-items:center;text-align:center;font-family:var(--en-d);font-size:clamp(30px,8vw,48px);line-height:.9;transform:rotate(-12deg);animation:wob 3.2s ease-in-out infinite,pop .6s .9s both cubic-bezier(.3,1.6,.5,1)}
 .sticker small{font-family:var(--ar);font-weight:700;font-size:.36em}
 html[lang=en] .sticker small{font-family:var(--mono);font-size:.28em;text-transform:uppercase}
-@keyframes spin{to{rotate:360deg}}
+@keyframes wob{0%,100%{rotate:0deg}50%{rotate:14deg}}
 @keyframes pop{from{scale:0}to{scale:1}}
 
 /* ticker */
@@ -94,7 +94,8 @@ html[lang=en] .ch h3{font-family:var(--en-d);text-transform:uppercase}
 /* split */
 .split{position:relative;margin-top:40px}
 .split img{width:100%;height:92svh;object-fit:cover;object-position:50% 30%}
-.split__word{position:absolute;inset:auto var(--pad) 28px;margin:0;font-family:var(--ar-d);font-size:clamp(96px,30vw,260px);line-height:.85;color:var(--lime);mix-blend-mode:difference}
+.split::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(180deg,rgba(11,11,11,0),rgba(11,11,11,.9))}
+.split__word{position:absolute;inset:auto var(--pad) 28px;margin:0;font-family:var(--ar-d);font-size:clamp(96px,30vw,260px);line-height:.85;color:var(--lime);z-index:1}
 html[lang=en] .split__word{font-family:var(--en-d);font-size:clamp(72px,19vw,200px)}
 
 /* content */
