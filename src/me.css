@@ -160,3 +160,15 @@ html[lang=en] .hero__line{font-family:"Inter",system-ui,sans-serif;text-transfor
 .show--alt .show__at{color:var(--lime)}
 html[lang=ar] .mono{letter-spacing:0;font-family:var(--ar);font-weight:600;font-size:13px}
 html[lang=ar] .show__at,html[lang=ar] .foot__small{font-family:var(--mono);font-weight:500;font-size:12px}
+/* v4: hero photo framing */
+.hero__photo img{object-position:28% 12%;transform:none;animation:none;filter:none}
+@media (min-width:900px){
+  .hero{grid-template-columns:1fr 1fr;align-items:stretch;padding-top:0}
+  .hero__photo{position:relative;inset:auto;grid-column:2;grid-row:1;z-index:0;height:100svh}
+  .hero__photo img{object-position:30% 20%}
+  .hero__photo::after{background:linear-gradient(90deg,rgba(11,11,11,.55),rgba(11,11,11,0) 30%)}
+  html[dir=rtl] .hero__photo::after{background:linear-gradient(270deg,rgba(11,11,11,.55),rgba(11,11,11,0) 30%)}
+  .hero__copy{grid-column:1;grid-row:1;align-self:end;padding-bottom:9vh}
+  .name .ar{font-size:min(16vw,30svh,240px)}
+  .name .en{font-size:min(13vw,24svh,210px)}
+}
