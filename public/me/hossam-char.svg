@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" role="img" aria-label="Illustrated character of Hossam">
+  <style>
+    .o{stroke:#0B0B0B;stroke-width:6;stroke-linejoin:round;stroke-linecap:round}
+    .eye{animation:blink 4.5s infinite;transform-origin:center;transform-box:fill-box}
+    @keyframes blink{0%,46%,50%,100%{transform:scaleY(1)}48%{transform:scaleY(.1)}}
+    .arm{animation:wave 3.2s ease-in-out infinite;transform-origin:300px 380px}
+    @keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-6deg)}}
+    @media (prefers-reduced-motion:reduce){.eye,.arm{animation:none}}
+  </style>
+  <!-- backdrop -->
+  <circle cx="200" cy="230" r="180" fill="#C6FF00"/>
+  <path d="M60 120 l14 -14 M74 120 l-14 -14" class="o" fill="none"/>
+  <path d="M330 90 l0 22 M319 101 l22 0" class="o" fill="none"/>
+  <!-- body / tee -->
+  <path class="o" fill="#F2EFE6" d="M70 460 C72 380 110 345 160 332 L240 332 C290 345 328 380 330 460 Z"/>
+  <path class="o" fill="none" d="M168 334 C180 356 220 356 232 334"/>
+  <!-- neck -->
+  <path class="o" fill="#C98E6B" d="M172 300 L172 338 C186 352 214 352 228 338 L228 300 Z"/>
+  <!-- ears -->
+  <ellipse class="o" cx="118" cy="214" rx="17" ry="24" fill="#C98E6B"/>
+  <ellipse class="o" cx="282" cy="214" rx="17" ry="24" fill="#C98E6B"/>
+  <rect x="108" y="206" width="12" height="18" rx="5" fill="#0B0B0B"/>
+  <!-- head -->
+  <path class="o" fill="#D69A76" d="M122 170 C122 112 158 86 200 86 C242 86 278 112 278 170 L278 228 C278 280 246 316 200 316 C154 316 122 280 122 228 Z"/>
+  <!-- beard -->
+  <path fill="#1A1512" class="o" d="M124 222 C126 258 142 300 200 318 C258 300 274 258 276 222 C266 244 256 256 246 262 C236 250 218 246 200 246 C182 246 164 250 154 262 C144 256 134 244 124 222 Z"/>
+  <!-- mouth -->
+  <path class="o" fill="#FFFFFF" d="M178 270 C186 284 214 284 222 270 Z"/>
+  <!-- moustache -->
+  <path fill="#1A1512" d="M168 262 C180 250 192 252 200 258 C208 252 220 250 232 262 C222 264 210 262 200 266 C190 262 178 264 168 262 Z"/>
+  <!-- nose -->
+  <path class="o" fill="none" d="M202 196 C206 216 210 228 198 234"/>
+  <!-- hair: curly top, short fade sides -->
+  <path fill="#1A1512" class="o" d="M120 178 C114 136 134 104 168 94 C178 82 196 78 210 84 C226 78 246 84 254 96 C278 102 290 124 284 146 C290 158 288 172 280 182 C276 160 268 144 256 136 C246 146 230 148 220 140 C206 150 188 150 176 140 C164 148 148 146 140 136 C130 146 124 162 120 178 Z"/>
+  <path fill="none" stroke="#3A2E27" stroke-width="4" stroke-linecap="round" d="M160 110 c6 -8 14 -8 18 0 M196 100 c6 -8 14 -8 18 0 M232 108 c6 -8 14 -8 18 0 M180 126 c6 -6 12 -6 16 0 M216 126 c6 -6 12 -6 16 0"/>
+  <!-- brows -->
+  <path class="o" fill="none" stroke-width="9" d="M146 176 C156 168 170 168 180 172"/>
+  <path class="o" fill="none" stroke-width="9" d="M220 172 C230 168 244 168 254 176"/>
+  <!-- glasses -->
+  <rect class="o" x="138" y="184" width="54" height="38" rx="9" fill="#FFFFFF" fill-opacity=".18"/>
+  <rect class="o" x="208" y="184" width="54" height="38" rx="9" fill="#FFFFFF" fill-opacity=".18"/>
+  <path class="o" fill="none" d="M192 200 C198 194 202 194 208 200 M138 196 L122 192 M262 196 L278 192"/>
+  <!-- eyes -->
+  <ellipse class="eye" cx="166" cy="205" rx="6" ry="7" fill="#0B0B0B"/>
+  <ellipse class="eye" cx="234" cy="205" rx="6" ry="7" fill="#0B0B0B"/>
+  <!-- arm holding phone -->
+  <g class="arm">
+    <path class="o" fill="#D69A76" d="M286 460 L300 380 C304 362 324 356 334 370 L338 380 L318 460 Z"/>
+    <rect class="o" x="300" y="292" width="62" height="104" rx="12" fill="#0B0B0B"/>
+    <rect x="308" y="302" width="46" height="84" rx="6" fill="#C6FF00"/>
+    <text x="331" y="330" text-anchor="middle" font-family="Impact,Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#0B0B0B">45K</text>
+    <path d="M314 356 l10 -10 l8 6 l14 -16" fill="none" stroke="#0B0B0B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="o" fill="#D69A76" d="M294 372 C290 358 302 350 312 356 L318 382 C310 390 298 388 294 372 Z"/>
+    <rect class="o" x="300" y="384" width="34" height="14" rx="5" fill="#B8BCC2"/>
+  </g>
+</svg>

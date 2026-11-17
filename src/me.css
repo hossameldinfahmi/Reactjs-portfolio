@@ -186,3 +186,10 @@ html[lang=ar] .show__at,html[lang=ar] .foot__small{font-family:var(--mono);font-
 .drawn .mk path{stroke-dashoffset:0}
 @media (prefers-reduced-motion:reduce){.mk path{stroke-dashoffset:0}}
 .show__vid,.ch__img{height:auto}
+/* character */
+.show__char{width:min(100%,300px);height:auto;margin:-6px 0 4px;justify-self:start;transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.show:hover .show__char,.show:focus-visible .show__char{transform:rotate(-4deg) scale(1.04)}
+.foot{position:relative;overflow:hidden}
+.foot__char{position:absolute;inset-inline-end:-30px;bottom:-40px;width:min(52vw,320px);height:auto;transform:rotate(-8deg)}
+.foot__big,.foot__links,.foot__small{position:relative;z-index:1}
+@media (max-width:600px){.foot__char{width:46vw;bottom:-30px;inset-inline-end:-24px;opacity:.95}.foot__links{max-width:62%}}
