@@ -140,7 +140,7 @@ html[lang=ar] .next__h mark{display:inline-block;line-height:1.1;padding:0 .1em 
 /* v2 additions */
 .hero__photo img{object-position:50% 22%}
 .ch__img{margin-top:18px;border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
-.show__vid{width:100%;aspect-ratio:9/12;object-fit:cover;object-position:50% 20%;border-radius:14px;margin-bottom:6px;background:#111}
+.show__vid{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:14px;margin-bottom:6px;background:#111}
 .show__stats{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 2px}
 .show__stats>span{display:flex;align-items:baseline;gap:6px}
 .show__stats b{font-family:var(--en-d);font-weight:400;font-size:clamp(34px,9vw,56px);line-height:1;color:var(--lime)}
