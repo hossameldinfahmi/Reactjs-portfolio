@@ -1,4 +1,13 @@
-# Next.Js Website Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# hossamfahmy.com
 
+Personal site of Hossam Fahmy — Senior Frontend Engineer. Hand-built with Vite + TypeScript, no UI framework.
 
-This repository contains starter code for Portfolio website created using NextJs. <br />
+The hero is an "x-ray" lens: the page is the design, and the lens shows the engineering underneath.
+
+```bash
+npm install
+npm run dev     # local
+npm run build   # production build in dist/
+```
+
+Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`, served at https://hossamfahmy.com.
