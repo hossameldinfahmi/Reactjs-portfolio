@@ -258,3 +258,18 @@ html[dir=rtl] .card--garage:hover .card__char{transform:scaleX(-1) translateY(-4
 .prog__fill{width:8%}
 
 .card__char{height:auto;align-self:flex-start}
+/* v7: mobile fixes */
+.bar{mix-blend-mode:normal;color:var(--paper);background:linear-gradient(180deg,rgba(11,11,11,.85),rgba(11,11,11,0));padding-bottom:26px}
+.lang{background:rgba(11,11,11,.35)}
+.chips-m{display:none}
+@media (max-width:899px){
+  .hero__photo .chip{display:none}
+  .chips-m{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+  .chips-m .chip{position:static;transform:none;font-size:13px;padding:8px 12px}
+  .chips-m .chip b{font-size:24px}
+  .chips-m .chip--a{transform:rotate(-2deg)}
+  .chips-m .chip--b{transform:rotate(2deg)}
+  .hero__photo img{object-position:30% 8%}
+}
+.foot__big{line-height:.95}
+html[lang=en] .foot__big{font-size:clamp(88px,26vw,260px);line-height:.92}
