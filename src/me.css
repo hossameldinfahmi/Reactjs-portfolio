@@ -158,3 +158,5 @@ html[lang=en] .hero__line{font-family:"Inter",system-ui,sans-serif;text-transfor
 .next__h{font-size:clamp(64px,18vw,160px)}
 .show--alt{border-color:var(--paper)}
 .show--alt .show__at{color:var(--lime)}
+html[lang=ar] .mono{letter-spacing:0;font-family:var(--ar);font-weight:600;font-size:13px}
+html[lang=ar] .show__at,html[lang=ar] .foot__small{font-family:var(--mono);font-weight:500;font-size:12px}
