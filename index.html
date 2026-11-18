@@ -13,7 +13,7 @@
   <meta property="og:description" content="Design on top. Engineering underneath. Angular & React at Vodafone scale.">
   <meta property="og:image" content="https://hossamfahmy.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>document.documentElement.classList.add('js');try{var w=sessionStorage.getItem('wipe');if(w){document.documentElement.style.setProperty('--wipe',w);document.documentElement.classList.add('wiping')}}catch(e){}</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
 <body>
   <a class="skip mono" href="#main">Skip to content</a>
 
+  <div class="scrollbar" aria-hidden="true"></div>
   <header class="top">
     <a href="#top" class="mono brand">HF/26 — Hossam Fahmy</a>
     <nav aria-label="Primary">
@@ -85,12 +86,69 @@
       </div>
     </section>
 
+    <aside class="hud mono" aria-label="Live measurements of this page">
+      <span class="hud__t">This page, measured in your browser just now</span>
+      <span>Largest paint <b id="hud-lcp">…</b></span>
+      <span>JavaScript <b id="hud-js">…</b></span>
+      <span>Requests <b id="hud-req">…</b></span>
+      <span>Frame rate <b id="hud-fps">…</b></span>
+      <span>Frameworks <b>0</b></span>
+    </aside>
+
     <section class="stats" aria-label="Impact">
-      <div class="stat reveal"><span class="mono">01 / reach</span><span class="mega n">28</span><span class="d">countries served by the VOIS platforms I build for</span></div>
-      <div class="stat reveal"><span class="mono">02 / speed</span><span class="mega n">−35%</span><span class="d">load time through AOT, lazy loading and bundle splitting</span></div>
-      <div class="stat reveal"><span class="mono">03 / availability</span><span class="mega n">99.9%</span><span class="d">for customer-facing apps with 50K+ monthly users</span></div>
-      <div class="stat reveal"><span class="mono">04 / effort</span><span class="mega n">−25%</span><span class="d">feature development time, thanks to shared component libraries</span></div>
-      <div class="stat reveal"><span class="mono">05 / awards</span><span class="mega n">4×</span><span class="d">Vodafone Star Award, plus Quarter Hero ×2 and the Wall of Appreciation</span></div>
+      <div class="stat reveal"><span class="mono">01 / reach</span><span class="mega n" data-count="28">28</span><span class="d">countries served by the VOIS platforms I build for</span></div>
+      <div class="stat reveal"><span class="mono">02 / speed</span><span class="mega n" data-count="35" data-pre="−" data-suf="%">−35%</span><span class="d">load time through AOT, lazy loading and bundle splitting</span></div>
+      <div class="stat reveal"><span class="mono">03 / availability</span><span class="mega n" data-count="99.9" data-dec="1" data-suf="%">99.9%</span><span class="d">for customer-facing apps with 50K+ monthly users</span></div>
+      <div class="stat reveal"><span class="mono">04 / effort</span><span class="mega n" data-count="25" data-pre="−" data-suf="%">−25%</span><span class="d">feature development time, thanks to shared component libraries</span></div>
+      <div class="stat reveal"><span class="mono">05 / awards</span><span class="mega n" data-count="4" data-suf="×">4×</span><span class="d">Vodafone Star Award, plus Quarter Hero ×2 and the Wall of Appreciation</span></div>
+    </section>
+
+    <section class="layers" id="layers" aria-labelledby="layers-h">
+      <div class="layers__pin">
+        <h2 id="layers-h" class="mega layers__h">Design on top.<br><span class="blue">Engineering underneath.</span></h2>
+        <div class="layers__stage" aria-hidden="true">
+          <div class="xstack">
+            <div class="ly ly--ui" style="--z:2">
+              <div class="ui__bar"><i></i><i></i><i></i><span class="mono">vodafone.de/stoerung</span></div>
+              <div class="ui__body">
+                <b class="mega">Check your connection</b>
+                <div class="ui__row"><span></span><span></span><em>Check</em></div>
+                <div class="ui__tbl"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="ly ly--bp" style="--z:1"><span class="mono ly__tag">a11y tree</span>
+              <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="130" y="16" width="60" height="26"/><rect x="40" y="88" width="60" height="26"/><rect x="130" y="88" width="60" height="26"/><rect x="220" y="88" width="60" height="26"/><rect x="100" y="158" width="50" height="24"/><rect x="170" y="158" width="50" height="24"/><path d="M160 42v24M70 88V66h180v22M160 66v22M160 114v22M125 158v-22h70v22"/></g><g font-family="JetBrains Mono,monospace" font-size="9" fill="currentColor" text-anchor="middle"><text x="160" y="33">main</text><text x="70" y="105">h1</text><text x="160" y="105">form</text><text x="250" y="105">table</text><text x="125" y="174">label</text><text x="195" y="174">button</text></g></svg></div>
+            <div class="ly ly--bp" style="--z:0"><span class="mono ly__tag">state</span>
+              <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="56" cy="100" r="30"/><rect x="128" y="34" width="72" height="30"/><rect x="128" y="136" width="72" height="30"/><rect x="238" y="85" width="62" height="30"/><path d="M84 88 126 54M200 49c30 0 60 10 66 34M238 108c-12 30-22 40-38 42M128 151C96 150 76 140 68 128" marker-end="url(#ah)"/></g><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="currentColor"/></marker></defs><g font-family="JetBrains Mono,monospace" font-size="9" fill="currentColor" text-anchor="middle"><text x="56" y="103">store</text><text x="164" y="53">selector$</text><text x="164" y="155">effect$</text><text x="269" y="103">view</text></g></svg></div>
+            <div class="ly ly--bp" style="--z:-1"><span class="mono ly__tag">bundles</span>
+              <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="24" y="40" width="272" height="26" stroke-dasharray="4 4"/><rect x="24" y="40" width="176" height="26" fill="currentColor" fill-opacity=".85"/><rect x="24" y="96" width="86" height="22"/><rect x="118" y="96" width="60" height="22"/><rect x="186" y="96" width="44" height="22"/><rect x="24" y="140" width="52" height="22"/><rect x="84" y="140" width="40" height="22"/></g><g font-family="JetBrains Mono,monospace" font-size="9" fill="currentColor"><text x="24" y="30">initial load</text><text x="296" y="30" text-anchor="end">−35%</text><text x="24" y="88">lazy routes</text><text x="24" y="180">preloaded on idle</text></g></svg></div>
+            <div class="ly ly--bp" style="--z:-2"><span class="mono ly__tag">pipeline</span>
+              <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M40 100h240"/><circle cx="40" cy="100" r="12" fill="currentColor"/><circle cx="120" cy="100" r="12" fill="currentColor"/><circle cx="200" cy="100" r="12" fill="currentColor"/><circle cx="280" cy="100" r="16"/><path d="m272 100 6 6 10-12"/></g><g font-family="JetBrains Mono,monospace" font-size="9" fill="currentColor" text-anchor="middle"><text x="40" y="134">lint</text><text x="120" y="134">test</text><text x="200" y="134">build</text><text x="280" y="138">ship</text><text x="160" y="60">99.9% available</text></g></svg></div>
+          </div>
+        </div>
+        <ol class="layers__list">
+          <li data-n="01"><h3>Interface</h3><p>Angular and React component libraries that several teams build with, so a new feature starts from tested parts.</p><span class="mega">−25% <small>feature dev time</small></span></li>
+          <li data-n="02"><h3>Accessibility and SEO</h3><p>Semantic markup, WCAG 2.1 and Core Web Vitals. I own all three on the platforms I lead.</p><span class="mega">WCAG 2.1</span></li>
+          <li data-n="03"><h3>State and data</h3><p>RxJS and NgRx with client-side caching, so the UI asks the server only for what changed.</p><span class="mega">−60% <small>API calls, YallaGo</small></span></li>
+          <li data-n="04"><h3>Performance</h3><p>AOT compilation, lazy routes, bundle splitting and route preloading on Vodafone’s customer apps.</p><span class="mega">−35% <small>load time</small></span></li>
+          <li data-n="05"><h3>Delivery</h3><p>CI/CD on Azure DevOps. An enterprise Angular migration shipped two weeks early with zero production defects.</p><span class="mega">99.9% <small>availability</small></span></li>
+        </ol>
+        <p class="mono layers__hint">Scroll to take the page apart</p>
+      </div>
+    </section>
+
+    <section class="reach" aria-labelledby="reach-h">
+      <canvas id="globe" aria-hidden="true"></canvas>
+      <div class="reach__copy">
+        <h2 id="reach-h" class="mega">Written in Cairo.<br>Running in 28 markets.</h2>
+        <p>I work inside Vodafone Germany’s Web Factory from Cairo. One of the apps I built and tuned is vodafone.de/stoerung, where customers check for network faults.</p>
+        <dl class="reach__dl">
+          <div><dt class="mono">Monthly users</dt><dd class="mega">50K+</dd></div>
+          <div><dt class="mono">Availability</dt><dd class="mega">99.9%</dd></div>
+          <div><dt class="mono">Cairo to Düsseldorf</dt><dd class="mega" id="km">—</dd></div>
+        </dl>
+        <p class="mono reach__hint"><span class="fine">Drag the globe</span><span class="coarse">Swipe the globe</span></p>
+      </div>
     </section>
 
     <section id="log" class="log" aria-labelledby="log-h">
@@ -132,6 +190,30 @@
         <span class="info"><span class="desc">Enterprise logistics platform at Obeikan Digital — 5 major releases.</span><span class="mega metric">+40% perf</span><span class="mono stack">Angular · NgRx · lazy loading · AOT</span></span>
       </a>
     </section>
+    <section class="kit" aria-labelledby="kit-h">
+      <h2 id="kit-h" class="mega kit__h reveal">What I work with</h2>
+      <div class="kit__grid">
+        <div class="kit__col reveal"><h3 class="mono">Frontend</h3><ul><li>Angular</li><li>React</li><li>Next.js</li><li>TypeScript</li><li>RxJS</li><li>NgRx</li><li>SCSS</li><li>Tailwind CSS</li><li>Angular Material</li><li>Material UI</li></ul></div>
+        <div class="kit__col reveal"><h3 class="mono">Engineering</h3><ul><li>Component library design</li><li>Performance optimization</li><li>Core Web Vitals</li><li>WCAG 2.1 accessibility</li><li>SEO</li><li>Clean architecture</li><li>Design patterns</li></ul></div>
+        <div class="kit__col reveal"><h3 class="mono">Backend and data</h3><ul><li>Node.js</li><li>Express</li><li>REST APIs</li><li>MongoDB</li><li>PostgreSQL</li><li>MySQL</li></ul></div>
+        <div class="kit__col reveal"><h3 class="mono">Cloud and delivery</h3><ul><li>AWS</li><li>Docker</li><li>Azure DevOps</li><li>CI/CD</li><li>Agile Scrum</li><li>Figma</li></ul></div>
+      </div>
+      <div class="awards">
+        <div class="awards__stars" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="awards__txt">
+          <p class="awards__big mega">Four Vodafone Stars in two years</p>
+          <ul class="awards__list">
+            <li><b>Web App Optimization</b><span class="mono">Feb 2025</span></li>
+            <li><b>Agile Delivery Excellence</b><span class="mono">Jun 2025</span></li>
+            <li><b>Quarter Hero, twice</b><span class="mono">VOIS</span></li>
+            <li><b>Wall of Appreciation</b><span class="mono">Vodafone Germany Web Factory</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lead">
+        <p class="lead__q reveal">I lead frontend architecture, review the code, and mentor four engineers. I also taught HTML and CSS at ITI, the institute that turned me from a law graduate into an engineer.</p>
+      </div>
+    </section>
   </main>
 
   <footer id="contact" class="foot">
@@ -141,6 +223,7 @@
       <a class="u" href="https://github.com/hossameldinfahmi" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="u" href="https://www.linkedin.com/in/hossamfahmi" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="u" href="/Hossam-Fahmy-CV.pdf" target="_blank" rel="noopener">CV (PDF) ↓</a>
+      <a class="u side" href="/me/" data-wipe="#0B0B0B">I also founded a startup ↗</a>
     </div>
     <div class="foot__bar">
       <span class="mono">© 2026 Hossam Fahmy — Cairo</span>

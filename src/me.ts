@@ -1,3 +1,4 @@
+import { initWipe } from "./wipe";
 const root = document.documentElement;
 
 const TITLES = {
@@ -72,3 +73,64 @@ const mio = new IntersectionObserver((entries) => {
   for (const e of entries) if (e.isIntersecting) { e.target.classList.add('drawn'); mio.unobserve(e.target); }
 }, { threshold: 0.6 });
 marks.forEach((m) => mio.observe(m));
+
+// ---- v9: page wipe, 3D and scroll motion ----
+
+initWipe();
+
+// Hero photo tilt (desktop pointers only)
+const heroEl = document.querySelector<HTMLElement>('.hero');
+const photo = document.querySelector<HTMLElement>('.hero__photo');
+if (heroEl && photo && !reduce && matchMedia('(min-width:900px) and (hover:hover)').matches) {
+  heroEl.addEventListener('pointermove', (e) => {
+    const b = heroEl.getBoundingClientRect();
+    const x = (e.clientX - b.left) / b.width - 0.5;
+    const y = (e.clientY - b.top) / b.height - 0.5;
+    photo.style.setProperty('--ty', `${(x * 14).toFixed(2)}deg`);
+    photo.style.setProperty('--tx', `${(-y * 10).toFixed(2)}deg`);
+  });
+  heroEl.addEventListener('pointerleave', () => { photo.style.setProperty('--ty', '0deg'); photo.style.setProperty('--tx', '0deg'); });
+}
+
+// One dot per 1,000 users: 45 lit out of 1,000
+const field = document.querySelector<HTMLElement>('.field');
+if (field) {
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < 1000; i++) {
+    const d = document.createElement('i');
+    if (i < 45) { d.className = 'on'; d.style.setProperty('--i', String(i)); }
+    frag.append(d);
+  }
+  field.append(frag);
+  new IntersectionObserver(([e], o) => { if (e.isIntersecting) { field.classList.add('in'); o.disconnect(); } }, { threshold: 0.25 }).observe(field);
+}
+
+// Product demo: play only while visible, and turn the phone with the scroll
+const demo = document.querySelector<HTMLElement>('.demo');
+const phone = document.querySelector<HTMLElement>('.phone');
+const chapters = [...document.querySelectorAll<HTMLElement>('.ch')];
+if (demo) new IntersectionObserver(([e]) => demo.classList.toggle('play', e.isIntersecting), { threshold: 0.2 }).observe(demo);
+
+const onScrollMe = () => {
+  const vh = innerHeight;
+  if (phone && demo && !reduce) {
+    const b = demo.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (vh - b.top) / (vh + b.height)));
+    const dir = root.dir === 'rtl' ? -1 : 1;
+    phone.style.setProperty('--ry', `${(dir * (-34 + p * 44)).toFixed(2)}deg`);
+    phone.style.setProperty('--rx', `${(16 - p * 14).toFixed(2)}deg`);
+    phone.style.setProperty('--rz', `${(dir * (5 - p * 6)).toFixed(2)}deg`);
+  }
+  if (!reduce) {
+    for (let i = 0; i < chapters.length - 1; i++) {
+      const r = chapters[i].getBoundingClientRect();
+      const n = chapters[i + 1].getBoundingClientRect();
+      const o = Math.min(1, Math.max(0, (r.bottom - n.top) / r.height));
+      chapters[i].style.setProperty('--s', (1 - 0.07 * o).toFixed(4));
+      chapters[i].style.setProperty('--b', (1 - 0.45 * o).toFixed(3));
+    }
+  }
+};
+let tickMe = false;
+addEventListener('scroll', () => { if (tickMe) return; tickMe = true; requestAnimationFrame(() => { tickMe = false; onScrollMe(); }); }, { passive: true });
+onScrollMe();

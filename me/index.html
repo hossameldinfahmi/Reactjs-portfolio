@@ -13,6 +13,7 @@
 <meta property="og:description" content="فاوندر MoneyLoop: 45 ألف مستخدم في 6 شهور. +3.8 مليون مشاهدة على القرش الأبيض. كو فاوندر Wint (2018).">
 <meta property="og:image" content="https://hossamfahmy.com/me/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<script>try{var w=sessionStorage.getItem('wipe');if(w){document.documentElement.style.setProperty('--wipe',w);document.documentElement.classList.add('wiping')}}catch(e){}</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,7 @@
 <a class="skip" href="#story"><span class="ar">اقفز للقصة</span><span class="en">Skip to the story</span></a>
 
 <header class="bar">
-  <a class="bar__home mono" href="/"><span class="ar">النسخة الرسمية ←</span><span class="en">← The engineer</span></a>
+  <a class="bar__home mono" href="/" data-wipe="#ECE9E2"><span class="ar">النسخة الرسمية ←</span><span class="en">← The engineer</span></a>
   <button class="lang mono" id="lang" type="button" aria-label="Switch language / غيّر اللغة"><span class="ar">EN</span><span class="en">عربي</span></button>
 </header>
 
@@ -102,6 +103,32 @@
   </section>
 
 
+  <!-- PRODUCT -->
+  <section class="demo" aria-labelledby="demo-h">
+    <div class="demo__copy">
+      <h2 id="demo-h" class="demo__h"><span class="ar">رسايل البنك داخلة.<br>شهرك مترتب طالع.</span><span class="en">Bank texts go in.<br>A sorted month comes out.</span></h2>
+      <p class="demo__p"><span class="ar">MoneyLoop بيقرا رسايل البنك والمحفظة وإنستاباي أول ما توصل، ويحطها في مكانها: مصاريف، اشتراكات، أقساط، ديون. من غير ما تكتب حاجة بإيدك.</span><span class="en">MoneyLoop reads your bank, wallet and InstaPay texts as they arrive and files each one: spending, subscriptions, installments, debts. You type nothing.</span></p>
+      <a class="btn btn--lime" href="https://moneyloop.co" target="_blank" rel="noopener"><span class="ar">جرّب MoneyLoop ↖</span><span class="en">Try MoneyLoop ↗</span></a>
+    </div>
+    <div class="demo__stage" aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <div class="screen__top"><span class="ar">الشهر ده</span><span class="en">This month</span><i></i></div>
+          <ul class="sorted">
+            <li><span><span class="ar">مصاريف</span><span class="en">Spending</span></span><b>450</b><i style="--w:22%"></i></li>
+            <li><span><span class="ar">اشتراكات</span><span class="en">Subscriptions</span></span><b>120</b><i style="--w:7%"></i></li>
+            <li><span><span class="ar">أقساط</span><span class="en">Installments</span></span><b>1,500</b><i style="--w:72%"></i></li>
+          </ul>
+          <p class="total"><span class="ar">خرج منك</span><span class="en">Out this month</span><b>2,070 <small><span class="ar">ج.م</span><span class="en">EGP</span></small></b></p>
+        </div>
+        <div class="sms sms--1"><span class="ar">تم خصم 450 ج.م من بطاقتك: سوبر ماركت</span><span class="en">EGP 450 charged to your card: supermarket</span></div>
+        <div class="sms sms--2"><span class="ar">تم تجديد اشتراكك الشهري بـ 120 ج.م</span><span class="en">Your monthly subscription renewed: EGP 120</span></div>
+        <div class="sms sms--3"><span class="ar">تم سداد قسط بقيمة 1,500 ج.م</span><span class="en">Installment paid: EGP 1,500</span></div>
+      </div>
+      <p class="demo__cap"><span class="ar">رسم توضيحي للفكرة، مش سكرين شوت من التطبيق.</span><span class="en">An illustration of the idea, not an app screenshot.</span></p>
+    </div>
+  </section>
+
   <!-- CONTENT -->
   <section class="content" aria-labelledby="content-h">
     <h2 id="content-h" class="content__h"><span class="ar">بعمل محتوى.</span><span class="en">I make content.</span></h2>
@@ -139,6 +166,8 @@
       <span class="ar">اللي جاي.</span>
       <span class="en">What's next.</span>
     </h2>
+    <div class="field" aria-hidden="true"></div>
+    <p class="field__cap"><span class="ar">كل نقطة بألف مستخدم. <b>45</b> نوّروا في 6 شهور. فاضل <b>955</b>.</span><span class="en">Each dot is 1,000 users. <b>45</b> lit up in six months. <b>955</b> to go.</span></p>
     <ol class="goals">
       <li><span class="ar"><b class="goal ci">1,000,000<svg class="mk" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M60 4 C22 2 3 10 3 21 C3 33 30 38 55 37 C82 36 98 29 97 18 C96 8 72 3 48 5"/></svg></b> مستخدم على MoneyLoop، وأول حاجة أي حد في مصر يفتحها يوم ما يقبض.</span><span class="en"><b class="goal ci">1,000,000<svg class="mk" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M60 4 C22 2 3 10 3 21 C3 33 30 38 55 37 C82 36 98 29 97 18 C96 8 72 3 48 5"/></svg></b> MoneyLoop users, and the first thing anyone in Egypt opens on payday.</span></li>
       <li><span class="ar">القرش الأبيض يبقى المكان اللي الناس تتعلم فيه الفلوس من غير ما تزهق.</span><span class="en">El 2ersh El Abyad becomes where people learn money without getting bored.</span></li>
@@ -157,7 +186,7 @@
       <a href="https://www.tiktok.com/@el2ersh.elabyad" target="_blank" rel="noopener">TikTok</a>
       <a href="https://www.instagram.com/moneygarageco/" target="_blank" rel="noopener">Money Garage</a>
       <a href="https://www.linkedin.com/in/hossamfahmi" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="/"><span class="ar">النسخة الرسمية</span><span class="en">The engineer site</span></a>
+      <a href="/" data-wipe="#ECE9E2"><span class="ar">النسخة الرسمية</span><span class="en">The engineer site</span></a>
     </nav>
     <p class="foot__small mono">© 2026 Hossam Fahmy · Cairo</p>
   </footer>
